@@ -2,5 +2,4 @@
 Here a bot over which I practice. The bot for parsing from habr.com
 
 I use libraries:
-PyTelegramBotAPI
-beautifulsoup4
+PyTelegramBotAPI and beautifulsoup4
