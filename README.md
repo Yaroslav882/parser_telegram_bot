@@ -1,2 +1,6 @@
 # simple_telegram_bot
-Here is the code for a simple telegram bot.
+Here a bot over which I practice. The bot for parsing from habr.com
+
+I use libraries:
+PyTelegramBotAPI
+beautifulsoup4
