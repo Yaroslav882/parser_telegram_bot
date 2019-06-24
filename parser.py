@@ -3,14 +3,14 @@
 import urllib.request
 from bs4 import BeautifulSoup
 
-def getAllTitle(amount, rating='all'):
+def getTitlesFromAll(amount, rating='all'):
     output = ''
     for i in range(1, amount+1):
         try:
             if rating == 'all':
-                html = urllib.request.urlopen('https://habr.com/ru/all/page'+ str(i) +'/').read()
+                html = urllib.request.urlopen('https://habrahabr.ru/all/page'+ str(i) +'/').read()
             else:
-                html = urllib.request.urlopen('https://habr.com/ru/all/'+ rating +'/page'+ str(i) +'/').read()
+                html = urllib.request.urlopen('https://habrahabr.ru/all/'+ rating +'/page'+ str(i) +'/').read()
         except urllib.error.HTTPError:
             print('Error 404 Not Found')
             break
@@ -21,7 +21,7 @@ def getAllTitle(amount, rating='all'):
             output += ('- "'+i+'",\n')
     return output
 
-def getTopTitile(amount, ade='daily'):
+def getTitlesFromTop(amount, age='daily'):
     output = ''
     for i in range(1, amount+1):
         try:
